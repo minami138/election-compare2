@@ -1,226 +1,190 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>選挙比較（一覧＋詳細＋党首メッセージ）</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>選挙政策 比較資料</title>
 <style>
-:root{
-  --jim:#c62828;   /* 自民 */
-  --ish:#2e7d32;   /* 維新 */
-  --chu:#1565c0;   /* 中道 */
-  --kok:#0d2a44;   /* 国民 */
-  --san:#ef6c00;   /* 参政 */
-  --com:#8b0000;   /* 共産 */
-}
-body{
-  font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
-  line-height:1.7; margin:0; color:#111;
-}
-header{background:#111;color:#fff;padding:14px}
-h1{margin:0;font-size:1.1rem}
-section{padding:14px}
-h2{font-size:1.05rem;margin:12px 0}
-.table-wrap{overflow-x:auto}
-table{border-collapse:collapse;width:100%;min-width:760px}
-th,td{border:1px solid #ddd;padding:8px;vertical-align:top}
-th{background:#f5f5f5}
-.party{font-weight:700}
-.jim{color:var(--jim)} .ish{color:var(--ish)} .chu{color:var(--chu)}
-.kok{color:var(--kok)} .san{color:var(--san)} .com{color:var(--com)}
-.card{border:1px solid #ddd;border-radius:6px;padding:10px;margin:10px 0}
-.leader{font-weight:700}
-footer{padding:16px;font-size:.85rem;color:#555}
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    line-height: 1.7;
+    margin: 16px;
+    background: #ffffff;
+    color: #111;
+  }
+  h1, h2 {
+    margin-top: 40px;
+  }
+  h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    vertical-align: top;
+  }
+  th {
+    background: #f5f5f5;
+  }
+
+  /* 政党カラー（党名のみ） */
+  .jimin { color: #c00000; font-weight: bold; }
+  .ishin { color: #2e8b57; font-weight: bold; }
+  .chudo { color: #1f4fff; font-weight: bold; }
+  .kokumin { color: #0b2c4d; font-weight: bold; }
+  .sansei { color: #ff7a00; font-weight: bold; }
+  .kyosan { color: #8b0000; font-weight: bold; }
+
+  .note {
+    background: #f9f9f9;
+    border-left: 4px solid #999;
+    padding: 12px;
+    margin: 16px 0;
+  }
 </style>
 </head>
-
 <body>
-<header>
-<h1>選挙比較｜一覧 → 詳細 → 党首メッセージ</h1>
-</header>
 
-<!-- 1ページ目：一覧 -->
-<section>
-<h2>政策比較一覧</h2>
-<div class="table-wrap">
+<h1>主要政策 比較資料（わかりやすさ重視）</h1>
+
+<!-- ===================== -->
+<h2>① 主要政策 比較一覧</h2>
+
 <table>
-<thead>
 <tr>
-<th>政党＼政策</th>
-<th>消費税</th>
-<th>エネルギー</th>
-<th>教育・子育て</th>
-<th>外国人・ルール</th>
+  <th>政党</th>
+  <th>消費税</th>
+  <th>エネルギー</th>
+  <th>教育・子育て</th>
+  <th>外国人・ルール</th>
 </tr>
-</thead>
-<tbody>
+
 <tr>
-<td class="party jim">自民</td>
-<td>食料品の時限ゼロ案を含め検討</td>
-<td>GX推進・再エネ主力化</td>
-<td>給付拡充・家庭庁中心</td>
-<td>不法滞在対策・審査厳格化</td>
+  <td class="jimin">自民党</td>
+  <td>食料品の消費税を2年間ゼロ</td>
+  <td>再エネ主力化＋原発活用</td>
+  <td>給付拡充・制度充実</td>
+  <td>不法滞在ゼロ・管理強化</td>
 </tr>
+
 <tr>
-<td class="party ish">維新</td>
-<td>食料品2年間ゼロ</td>
-<td>再稼働＋制度改革</td>
-<td>控除復活など負担軽減</td>
-<td>制度整理と厳格運用</td>
+  <td class="ishin">維新</td>
+  <td>食料品の消費税を2年間ゼロ</td>
+  <td>原発再稼働＋GX推進</td>
+  <td>世帯単位課税・控除重視</td>
+  <td>制度整理・厳格運用</td>
 </tr>
+
 <tr>
-<td class="party chu">中道</td>
-<td>食料品の恒久的軽減</td>
-<td>再エネ主軸／原発条件容認</td>
-<td>給付・無償化拡充</td>
-<td>人権尊重・排外主義反対</td>
+  <td class="chudo">中道</td>
+  <td>食料品の消費税を恒久ゼロ</td>
+  <td>再エネ主軸・原発は条件付き</td>
+  <td>無償化・給付型支援</td>
+  <td>人権重視・共生</td>
 </tr>
+
 <tr>
-<td class="party kok">国民</td>
-<td>一律5％（景気下支え）</td>
-<td>原発活用＋地域産業</td>
-<td>教育国債・控除復活</td>
-<td>上限とルールで管理</td>
+  <td class="kokumin">国民民主党</td>
+  <td>一律5％へ減税（景気対策）</td>
+  <td>原発活用＋地域分散型</td>
+  <td>教育国債・控除復活</td>
+  <td>上限とルールで管理</td>
 </tr>
+
 <tr>
-<td class="party san">参政</td>
-<td>消費税廃止</td>
-<td>国産エネルギー模索</td>
-<td>子ども1人月10万円</td>
-<td>移民国家にしない</td>
+  <td class="sansei">参政党</td>
+  <td>消費税廃止</td>
+  <td>国産エネルギーの模索</td>
+  <td>子ども1人月10万円</td>
+  <td>移民国家にしない</td>
 </tr>
+
 <tr>
-<td class="party com">共産</td>
-<td>消費税廃止を目指す</td>
-<td>原発ゼロ・再エネ</td>
-<td>給付拡充・独身税反対</td>
-<td>差別・排外主義反対</td>
+  <td class="kyosan">共産党</td>
+  <td>消費税廃止を目指し減税</td>
+  <td>原発ゼロ・再エネ</td>
+  <td>無償化・給付拡充</td>
+  <td>排外主義に反対</td>
 </tr>
-</tbody>
 </table>
+
+<!-- ===================== -->
+<h2>② 消費税について</h2>
+
+<p>
+消費税は「物価高対策」と「景気対策」で意味合いが異なります。
+短期的な負担軽減を重視するのか、景気全体を下支えするのかで各党の立場が分かれます。
+</p>
+
+<ul>
+<li><span class="jimin">自民党</span>：食料品に限り2年間ゼロ。家計負担の一時的軽減を重視。</li>
+<li><span class="ishin">維新</span>：同じく2年間ゼロ。制度見直しとセットで検討。</li>
+<li><span class="chudo">中道</span>：食料品は恒久的にゼロ。生活必需品の非課税化を重視。</li>
+<li><span class="kokumin">国民民主党</span>：景気下支え策として一律5％へ減税。賃金上昇が物価＋2％で安定するまで。</li>
+<li><span class="sansei">参政党</span>：消費税は廃止。</li>
+<li><span class="kyosan">共産党</span>：消費税廃止を目標に段階的減税。</li>
+</ul>
+
+<div class="note">
+<strong>食料品の消費税ゼロのデメリット</strong><br>
+・飲食店は仕入れ時の税額控除ができず、実質的な負担増になる場合がある<br>
+・農家・小規模事業者では事務負担が増える可能性<br>
+・制度が複雑になり価格転嫁が分かりにくくなる
 </div>
-</section>
 
-<!-- 2ページ目：消費税 -->
-<section>
-<h2>消費税（詳細）</h2>
-<div class="card"><p class="party jim">自民</p>
-<p>物価高対策として食料品の時限的ゼロ案を含め議論。制度影響や財源を考慮し慎重に検討。</p></div>
+<!-- ===================== -->
+<h2>③ エネルギー政策</h2>
 
-<div class="card"><p class="party ish">維新</p>
-<p>家計負担の即効的軽減を目的に、食料品の時限的ゼロを主張。</p></div>
+<ul>
+<li><span class="jimin">自民党</span>：再生可能エネルギーを主力電源としつつ、原発も活用。</li>
+<li><span class="ishin">維新</span>：原発再稼働と次世代炉研究を重視。</li>
+<li><span class="chudo">中道</span>：再エネ最大活用、原発は安全確認と合意を条件に限定。</li>
+<li><span class="kokumin">国民民主党</span>：原発を活用しつつ、地域分散型エネルギーで安定供給。</li>
+<li><span class="sansei">参政党</span>：活用可能な国産エネルギーを模索。</li>
+<li><span class="kyosan">共産党</span>：原発ゼロ、再エネ中心。</li>
+</ul>
 
-<div class="card"><p class="party chu">中道</p>
-<p>生活者の実感を重視し、食料品の恒久的な負担軽減を掲げる。</p></div>
+<!-- ===================== -->
+<h2>④ 教育・子育て</h2>
 
-<div class="card"><p class="party kok">国民</p>
-<p>景気を下支えする対策として、賃金上昇率が物価＋2％に安定するまで一律5％へ引下げ。</p></div>
+<ul>
+<li><span class="jimin">自民党</span>：給付拡充と制度整備。子育て支援金制度を推進。</li>
+<li><span class="ishin">維新</span>：世帯単位課税、年少扶養控除復活を重視。</li>
+<li><span class="chudo">中道</span>：無償化と給付型支援の拡大。</li>
+<li><span class="kokumin">国民民主党</span>：教育国債で財源確保。年少扶養控除復活と高校生扶養控除維持。子ども・子育て支援金（医療保険料への上乗せ）には反対。</li>
+<li><span class="sansei">参政党</span>：子ども1人あたり月10万円給付。</li>
+<li><span class="kyosan">共産党</span>：無償化拡大。子ども・子育て支援金には反対。</li>
+</ul>
 
-<div class="card"><p class="party san">参政</p>
-<p>消費税は構造的に家計を圧迫するとして、廃止を主張。</p></div>
+<!-- ===================== -->
+<h2>⑤ 外国人政策</h2>
 
-<div class="card"><p class="party com">共産</p>
-<p>逆進性が強いとして、消費税廃止を目指す立場。</p></div>
-</section>
+<ul>
+<li><span class="jimin">自民党</span>：不法滞在ゼロ。土地取得や在留管理を厳格化。</li>
+<li><span class="ishin">維新</span>：制度の適正運用と管理強化。</li>
+<li><span class="chudo">中道</span>：人権尊重と共生重視。</li>
+<li><span class="kokumin">国民民主党</span>：移民を推進せず、必要分野に限り国が上限とルールを設定。</li>
+<li><span class="sansei">参政党</span>：移民国家にしない。</li>
+<li><span class="kyosan">共産党</span>：排外主義に反対。</li>
+</ul>
 
-<!-- 3ページ目：エネルギー -->
-<section>
-<h2>エネルギー（詳細）</h2>
-<div class="card"><p class="party jim">自民</p>
-<p>GXを軸に再エネ主力化。地域共生と国民負担抑制を重視。</p></div>
+<!-- ===================== -->
+<h2>⑥ 党首メッセージ</h2>
 
-<div class="card"><p class="party ish">維新</p>
-<p>原発再稼働を進めつつ、制度改革と次世代技術開発。</p></div>
-
-<div class="card"><p class="party chu">中道</p>
-<p>再生可能エネルギーを主軸とし、安全性と合意があれば原発容認。</p></div>
-
-<div class="card"><p class="party kok">国民</p>
-<p>原発の活用と再エネを組み合わせ、地域産業の集約と育成を重視。</p></div>
-
-<div class="card"><p class="party san">参政</p>
-<p>活用可能な国産エネルギーの模索と自給率向上。</p></div>
-
-<div class="card"><p class="party com">共産</p>
-<p>原発ゼロを明確に掲げ、再生可能エネルギー中心へ転換。</p></div>
-</section>
-
-<!-- 4ページ目：教育・子育て -->
-<section>
-<h2>教育・子育て（詳細）</h2>
-<div class="card"><p class="party jim">自民</p>
-<p>給付拡充と無償化を進め、切れ目ない子育て支援を推進。</p></div>
-
-<div class="card"><p class="party ish">維新</p>
-<p>年少扶養控除など税制を通じた子育て世帯の負担軽減。</p></div>
-
-<div class="card"><p class="party chu">中道</p>
-<p>教育費負担軽減と給付型支援の拡充を重視。</p></div>
-
-<div class="card"><p class="party kok">国民</p>
-<p>教育国債により国民負担を抑えつつ投資。年少扶養控除復活と高校生扶養控除維持、子ども・子育て支援金（医療保険料上乗せ）に反対。</p></div>
-
-<div class="card"><p class="party san">参政</p>
-<p>子ども一人につき月10万円の給付で教育と子育てを支援。</p></div>
-
-<div class="card"><p class="party com">共産</p>
-<p>給付拡充を進め、独身税と呼ばれる子ども・子育て支援金に反対。</p></div>
-</section>
-
-<!-- 5ページ目：外国人 -->
-<section>
-<h2>外国人・ルール（詳細）</h2>
-<div class="card"><p class="party jim">自民</p>
-<p>不法滞在対策、在留・帰化審査の厳格化、土地取得の透明化。</p></div>
-
-<div class="card"><p class="party ish">維新</p>
-<p>外国人制度の整理と厳格運用を重視。</p></div>
-
-<div class="card"><p class="party chu">中道</p>
-<p>人権尊重の立場から、排外主義に反対。</p></div>
-
-<div class="card"><p class="party kok">国民</p>
-<p>移民を推進する立場ではなく、必要分野に限り国が上限とルールを定めて管理。</p></div>
-
-<div class="card"><p class="party san">参政</p>
-<p>移民国家にしないことを明確にし、総量規制と管理強化。</p></div>
-
-<div class="card"><p class="party com">共産</p>
-<p>差別や排外主義に反対し、外国人の権利保障を重視。</p></div>
-</section>
-
-<!-- 最終ページ：党首メッセージ -->
-<section>
-<h2>党首のメッセージ</h2>
-
-<div class="card"><p class="leader jim">自民党（高市早苗）</p>
-<p><strong>責任ある積極財政へ転換</strong><br>
-成長と安全保障を重視した国家運営を進める立場です。</p></div>
-
-<div class="card"><p class="leader ish">日本維新の会（藤田文武／吉村洋文）</p>
-<p><strong>家計のための税・社会保障改革</strong><br>
-制度改革を通じて家計負担の軽減を目指します。</p></div>
-
-<div class="card"><p class="leader chu">中道連合（斉藤鉄夫／野田佳彦）</p>
-<p><strong>生活者目線で政治を変える</strong><br>
-生活実感に寄り添う政策を重視します。</p></div>
-
-<div class="card"><p class="leader kok">国民民主党（玉木雄一郎）</p>
-<p><strong>もっと手取りを増やす</strong><br>
-住民税と社会保険料の実質負担を見直します。</p></div>
-
-<div class="card"><p class="leader san">参政党（神谷宗幣）</p>
-<p><strong>ひとりひとりが日本</strong><br>
-日本人主体の国づくりを重視します。</p></div>
-
-<div class="card"><p class="leader com">日本共産党（田村智子）</p>
-<p><strong>ブレずに国民のために働く</strong><br>
-格差是正と暮らし重視の政治を掲げます。</p></div>
-</section>
-
-<footer>
-※比較のため整理しています。最終判断は各党公式資料をご確認ください。
-</footer>
+<ul>
+<li><span class="jimin">自民党</span>：責任ある積極財政へ転換。</li>
+<li><span class="ishin">維新</span>：家計のための税・社会保障改革。</li>
+<li><span class="chudo">中道</span>：生活者ファースト。</li>
+<li><span class="kokumin">国民民主党</span>：もっと手取りを増やす。住民税と社会保険料の実質負担を軽減し、現役世代から家計にゆとりを生み、働くほど報われる仕組みへ。</li>
+<li><span class="sansei">参政党</span>：ひとりひとりが日本。</li>
+<li><span class="kyosan">共産党</span>：ブレずに国民のために働く。</li>
+</ul>
 
 </body>
 </html>
